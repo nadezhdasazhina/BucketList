@@ -3,7 +3,7 @@ import pickle
 
 class BucketListManager:
     def __init__(self):
-        self.__currentUser = User('a', '')
+        self.__currentUser = None
         self.__categories = []
         self.__users = []
 
@@ -18,9 +18,18 @@ class BucketListManager:
     def categories(self):
         return self.__categories
 
+    @property
+    def users(self):
+        return self.__users
+
+    def add_user(self, user):
+        self.__users.append(user)
+
     def autorize(self, login, password):
         for user in self.__users:
             if user.login == login and user.password == password:
                 self.__currentUser = user
                 return True
         return False
+
+

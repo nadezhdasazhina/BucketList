@@ -14,3 +14,7 @@ class User:
 
     def add_goal(self, goal):
         self.__goals.append(goal)
+
+    @property
+    def goals(self):
+        return self.__goals

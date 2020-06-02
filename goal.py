@@ -33,3 +33,10 @@ class Goal:
 
     def add_task(self, task):
         self.__tasks.append(task)
+
+    @property
+    def completed(self):
+        for task in self.tasks:
+            if not task.completed:
+                return False
+        return True
