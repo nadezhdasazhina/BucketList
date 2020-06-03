@@ -14,9 +14,9 @@ class Task:
     @property
     def status(self):
         if self.__completed:
-            return 'Завершена'
+            return 'Completed'
         else:
-            return 'Незавершена'
+            return 'Uncompleted'
 
     @completed.setter
     def completed(self, value):
