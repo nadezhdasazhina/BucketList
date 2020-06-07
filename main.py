@@ -177,3 +177,6 @@ def main():
             enemy_goals_menu()
 
 main()
+
+if __name__ == '__main__':
+    pass
